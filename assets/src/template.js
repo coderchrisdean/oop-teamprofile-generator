@@ -26,7 +26,7 @@ const engineerCard = (engineer) => {
     <div class="card employee-card">
         <div class="card-header">
             <h2 class="card-title">${engineer.getName()}</h2>
-            <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+            <h3 class="card-title">${engineer.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
@@ -45,7 +45,7 @@ const internCard = (intern) => {
     <div class="card employee-card">
         <div class="card-header">
             <h2 class="card-title">${intern.getName()}</h2>
-            <h3 class="card-title"><i class="fa-light fa-book-open"></i>${intern.getRole()}</h3>
+            <h3 class="card-title">${intern.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">

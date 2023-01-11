@@ -29,7 +29,7 @@ const Manager = require("./assets/library/Manager");
 const Intern = require("./assets/library/Intern");
 const {managerQuestions, engineerQuestions, internQuestions} = require("./questions");
 const generateHTML = require("./assets/src/template");
-
+var randomFileNum = Math.floor(100 + Math.random() * 9999)
 
 
 // team object to store all the team members data
@@ -73,7 +73,7 @@ const addEmployees = () => {
                 break;
             default:
                 
-                const randomFileNum = () => {return Math.floor(1000 + Math.random() * 9999)}
+                
                 console.log("Your team has been created. File stored at index" + randomFileNum + ".html");
                 let htmlData = generateHTML(team); 
                    

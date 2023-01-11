@@ -1,6 +1,7 @@
+
 const Employee = require("./Employee");
 
-// engineer class extends Employee class, and also have: github, getGithub(), getRole() // Overridden to return 'Engineer'
+// engineer class extends Employee class
 class Engineer extends Employee {
     constructor(name, id, email, github) {
         super(name, id, email);
