@@ -28,7 +28,7 @@ const Engineer = require("./assets/library/Engineer");
 const Manager = require("./assets/library/Manager");
 const Intern = require("./assets/library/Intern");
 const {managerQuestions, engineerQuestions, internQuestions} = require("./questions");
-const generateHTML = require("./assets/src/template");
+const generateHTML = require("./assets/src/helper");
 var randomFileNum = Math.floor(100 + Math.random() * 9999)
 
 
