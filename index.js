@@ -2,10 +2,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateHTML = require("./src/generateHTML");
-const Engineer = require("./lib/Manager");
-const Manager = require("./lib/Engineer");
+const Engineer = require("./lib/Engineer");
+const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
-
 // team object to store all the team members data
 const teamMembers = [];
 
@@ -112,20 +111,24 @@ function promptToAddTeamMember() {
       {
         type: "confirm",
         name: "confirmAddTeamMember",
-        message: "Would you like to add another team member",
-        default: false,
+        message: "Would you like to add another team member?",
+        default: true,
       },
     ])
-    .then(
-      (confirmAddTeamMemberData) =>
-        confirmAddTeamMemberData.confirmAddTeamMember
-    );
+    .then((answer) => {
+      if (answer.confirmAddTeamMember) {
+        console.log("Adding another team member.");
+        return true;
+      } else {
+        console.log("Team member entries are complete.");
+        return false;
+      }
+});
 }
 
 async function init() {
   let keepAddingTeamMembers = true;
-
-  while (keepAddingTeamMembers) {
+  while (keepAddingTeamMembers === true) {
     //prompt user for team member data
     const teamMemberData = await promptUser();
     //create team member object based on role
@@ -155,11 +158,8 @@ async function init() {
       teamMembers.push(intern);
     }
     //prompt user to add another team member
-    const { confirmAddTeamMember } = await promptToAddTeamMember();
-    if (confirmAddTeamMember === "No") {
-      keepAddingTeamMembers = false;
-    }
- 
+    keepAddingTeamMembers = await promptToAddTeamMember();
+  }
 
   //generate HTML using teamMembers array
   const html = generateHTML(teamMembers);
@@ -174,5 +174,5 @@ async function init() {
     );
   });
 }
-}
+
 init();
