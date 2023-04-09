@@ -6,6 +6,7 @@ const Manager = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 
+
 // team object to store all the team members data
 const teamMembers = []
 
@@ -118,6 +119,4 @@ function promptUser () {
         .then((confirmTAddTeamMemberData) => confirmTAddTeamMemberData.confirmTAddTeamMember);
     }
 
-    function generateHTML () {
-        const htmlArray = [];
-    }
+    const generateHTML = require("./src/generateHTML");
