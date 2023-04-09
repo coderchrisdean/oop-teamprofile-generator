@@ -1,6 +1,7 @@
 // packages and files/scripts required
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateHTML = require("./src/generateHTML");
 const Engineer = require("./lib/Manager");
 const Manager = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
