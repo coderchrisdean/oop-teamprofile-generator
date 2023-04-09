@@ -1,4 +1,8 @@
-function generateHTML() {
+const Manager = require("../lib/Manager");
+const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
+
+function generateHTML(teamMembers) {
   const htmlArray = [];
 
   htmlArray.push(`<!DOCTYPE html>

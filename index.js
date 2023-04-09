@@ -126,8 +126,9 @@ async function init() {
   let keepAddingTeamMembers = true;
 
   while (keepAddingTeamMembers) {
+    //prompt user for team member data
     const teamMemberData = await promptUser();
-
+    //create team member object based on role
     if (teamMemberData.role === "Manager") {
       const manager = new Manager(
         teamMemberData.name,
@@ -153,8 +154,11 @@ async function init() {
       );
       teamMembers.push(intern);
     }
-
-    keepAddingTeamMembers = await promptToAddTeamMember();
+    //prompt user to add another team member
+    const { addAnother } = await promptToAddTeamMember();
+    if (addAnother === "No") {
+      keepAddingTeamMembers = false;
+    }
   }
 
   //generate HTML using teamMembers array
