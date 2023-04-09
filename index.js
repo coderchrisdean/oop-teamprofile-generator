@@ -117,8 +117,8 @@ function promptToAddTeamMember() {
       },
     ])
     .then(
-      (confirmTAddTeamMemberData) =>
-        confirmTAddTeamMemberData.confirmTAddTeamMember
+      (confirmAddTeamMemberData) =>
+        confirmAddTeamMemberData.confirmAddTeamMember
     );
 }
 
@@ -155,11 +155,11 @@ async function init() {
       teamMembers.push(intern);
     }
     //prompt user to add another team member
-    const { addAnother } = await promptToAddTeamMember();
-    if (addAnother === "No") {
+    const { confirmAddTeamMember } = await promptToAddTeamMember();
+    if (confirmAddTeamMember === "No") {
       keepAddingTeamMembers = false;
     }
-  }
+ 
 
   //generate HTML using teamMembers array
   const html = generateHTML(teamMembers);
@@ -173,5 +173,6 @@ async function init() {
       "Your team profile has been generated! Please check out the index.html file in the dist folder to see it."
     );
   });
+}
 }
 init();

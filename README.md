@@ -1,7 +1,19 @@
 
 # OOP-Team Profile Generator
 
-This is an application designed to oorganiza and store your co-workers/team in a fancy way.  It takes the input of questions and then dynamically builds an HTML file for easy organization of your team.
+## Description
+
+This is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. The application will be invoked with the following command:
+
+## Table of Contents
+
+- [Usage](#usage)
+- [Tests](#tests)
+- [Screenshots](#screenshots)
+- [Questions](#questions)
+- [Link to Demo Video](#demo-video)
+- [Link to GitHub Repository](#github-repository)
+
 
 
 
@@ -13,20 +25,24 @@ This is an application designed to oorganiza and store your co-workers/team in a
 ## Screenshots
 
 ![App Screenshot](https://github.com/coderchrisdean/oop-teamprofile-generator/blob/main/assets/images/Screenshot.png)
-![App Screenshot](https://github.com/coderchrisdean/oop-teamprofile-generator/blob/main/assets/images/ScreenshotDemo.png)
-
 
 
 ## Installation
 
-In your terminal installed pathway run
+In your terminal, run the following command to install the required dependencies:
 ```
 npm install
-node index.js
+```
+
+## Usage
+
+In your terminal, run the following command to start the application:
+```
+npm start
 ```
 
 
-## Support
+## Questions
 
 For support, email coderchrisdean@gmail.com.
 
@@ -35,8 +51,6 @@ For support, email coderchrisdean@gmail.com.
 
 ## Demo Video
 
-https://github.com/coderchrisdean/oop-teamprofile-generator/blob/main/assets/DemoVideo.webm
+## GitHub Repository
 
-Alternate Link:
- - https://drive.google.com/file/d/16U075gs90GtOwE467dY_CExnAfbfHAGC/view
- 
+https://github.com/coderchrisdean/silver-pyramid
